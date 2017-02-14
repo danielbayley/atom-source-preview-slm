@@ -1,0 +1,44 @@
+{
+  "name": "source-preview-slm",
+  "version": "0.0.0",
+  "description": "source-preview provider for slm.",
+  "keywords": [
+    "slm",
+    "slim",
+    "template",
+    "preview",
+    "html"
+  ],
+  "homepage": "https://atom.io/packages/source-preview-slm",
+  "repository": "danielbayley/atom-source-preview-slm",
+  "bugs": "https://github.com/danielbayley/atom-source-preview-slm/issues",
+  "author": {
+    "name": "Daniel Bayley",
+    "email": "daniel.bayley@me.com",
+    "url": "https://github.com/danielbayley"
+  },
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "slm": "^0.6.0"
+  },
+  "scripts": {
+    "preinstall": "apm install source-preview language-slm"
+  },
+  "engines": {
+    "atom": "*"
+  },
+  "activationHooks": [
+    "language-slm:grammar-used"
+  ],
+  "activationCommands": {
+    "atom-text-editor:not(.mini)": "source-preview:toggle"
+  },
+  "providedServices": {
+    "preview.provider": {
+      "versions": {
+        "0.1.0": "activate"
+      }
+    }
+  }
+}

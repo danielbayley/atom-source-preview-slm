@@ -1,0 +1,7 @@
+# macOS
+.DS_Store
+
+# npm/yarn
+node_modules/
+npm*
+*yarn*
